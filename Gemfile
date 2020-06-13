@@ -6,7 +6,7 @@ ruby '2.6.6'
 gem 'bulma-rails', '~> 0.8.2'
 gem 'devise'
 gem 'simple_form', '~> 5.0', '>= 5.0.2'
-grm 'binding_of_caller'
+gem 'binding_of_caller'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.1'
 # Use sqlite3 as the database for Active Record
@@ -24,7 +24,7 @@ gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+ gem 'bcrypt', '~> 3.1.7'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

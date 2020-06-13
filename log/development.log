@@ -207,3 +207,160 @@ Your manifest contains:
   app/views/layouts/application.html.erb:9
 
 Started POST "/__better_errors/0b3cc67ab3836c7f/variables" for ::1 at 2020-06-12 08:34:16 -0700
+Started POST "/__better_errors/0b3cc67ab3836c7f/variables" for ::1 at 2020-06-12 09:03:01 -0700
+Started GET "/posts" for ::1 at 2020-06-12 09:03:01 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY updated_at DESC[0m
+  ↳ app/views/posts/_posts.html.erb:1
+  Rendered posts/_posts.html.erb (Duration: 26.1ms | Allocations: 1358)
+  Rendered posts/index.html.erb within layouts/application (Duration: 37.7ms | Allocations: 1738)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.4
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+C:/Ruby26-x64/lib/ruby/2.6.0/x64-mingw32/etc.so: warning: already initialized constant Struct::Passwd
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 6078ms (ActiveRecord: 0.5ms | Allocations: 11991)
+
+
+
+ActionView::Template::Error - Webpacker can't find application in C:/Users/Arsaln/Documents/GitHub/members_only/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+:
+  app/views/layouts/application.html.erb:9:in `view template'
+  app/views/layouts/application.html.erb:9
+
+Started POST "/__better_errors/84571b0d0118af30/variables" for ::1 at 2020-06-12 09:03:09 -0700
+Started GET "/posts" for ::1 at 2020-06-12 09:14:12 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY updated_at DESC[0m
+  ↳ app/views/posts/_posts.html.erb:1
+  Rendered posts/_posts.html.erb (Duration: 15.6ms | Allocations: 660)
+  Rendered posts/index.html.erb within layouts/application (Duration: 17.1ms | Allocations: 768)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.4
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+C:/Ruby26-x64/lib/ruby/2.6.0/x64-mingw32/etc.so: warning: already initialized constant Struct::Passwd
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 3444ms (ActiveRecord: 0.3ms | Allocations: 9431)
+
+
+
+ActionView::Template::Error - Webpacker can't find application in C:/Users/Arsaln/Documents/GitHub/members_only/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+:
+  app/views/layouts/application.html.erb:9:in `view template'
+  app/views/layouts/application.html.erb:9
+
+Started POST "/__better_errors/bdbba1931310f8f1/variables" for ::1 at 2020-06-12 09:14:16 -0700
+Started GET "/posts" for ::1 at 2020-06-12 09:17:01 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY updated_at DESC[0m
+  ↳ app/views/posts/_posts.html.erb:1
+  Rendered posts/_posts.html.erb (Duration: 10.8ms | Allocations: 664)
+  Rendered posts/index.html.erb within layouts/application (Duration: 28.4ms | Allocations: 767)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.4
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+C:/Ruby26-x64/lib/ruby/2.6.0/x64-mingw32/etc.so: warning: already initialized constant Struct::Passwd
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 7570ms (ActiveRecord: 0.4ms | Allocations: 9523)
+
+
+
+ActionView::Template::Error - Webpacker can't find application in C:/Users/Arsaln/Documents/GitHub/members_only/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+:
+  app/views/layouts/application.html.erb:9:in `view template'
+  app/views/layouts/application.html.erb:9
+
+Started POST "/__better_errors/9d08f1be941ff86f/variables" for ::1 at 2020-06-12 09:17:09 -0700
+Started GET "/" for ::1 at 2020-06-12 22:40:41 -0700
+  [1m[35m (33.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY updated_at DESC[0m
+  ↳ app/views/posts/_posts.html.erb:1
+  Rendered posts/_posts.html.erb (Duration: 56.7ms | Allocations: 1509)
+  Rendered posts/index.html.erb within layouts/application (Duration: 86.7ms | Allocations: 2123)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in C:/Users/Arsaln/Documents/GitHub/members_only/public/packs
+[Webpacker] C:/Ruby26-x64/lib/ruby/2.6.0/x64-mingw32/etc.so: warning: already initialized constant Struct::Passwd
+
+[Webpacker] Hash: 15d1bb7b54cf6326b9ba
+Version: webpack 4.43.0
+Time: 12436ms
+Built at: 06/12/2020 10:41:15 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 33597ms (Views: 33457.8ms | ActiveRecord: 0.9ms | Allocations: 21367)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-06-12 22:42:12 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 49.2ms | Allocations: 617)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 444.0ms | Allocations: 8271)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 552ms (Views: 516.5ms | ActiveRecord: 3.0ms | Allocations: 23264)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-06-12 22:42:17 -0700
+Processing by RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 774.9ms | Allocations: 15438)
+Completed 500 Internal Server Error in 797ms (ActiveRecord: 0.0ms | Allocations: 17555)
+
+
+
+ActionView::Template::Error - undefined method `name' for #<User id: nil, email: "", created_at: nil, updated_at: nil>:
+  app/views/devise/registrations/new.html.erb:5:in `view template'
+
+Started POST "/__better_errors/806bf7653b94790a/variables" for ::1 at 2020-06-12 22:42:18 -0700
