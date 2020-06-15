@@ -1,24 +1,45 @@
-# README
+# The Odin Project- Ruby on Rails
+## Project 2- Members Only!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is part of the Ruby on Rails 'Authentication' section of 'The Odin Project'.
 
-Things you may want to cover:
+The goal of this project is to build an exclusive clubhouse where members can write embarrassing posts about non-members. Inside the clubhouse, members can see who the author of a post is but, outside, they can only see the story and wonder who wrote it. 
 
-* Ruby version
+All the features that have been completed are listed on [The Odin Project's](https://www.theodinproject.com/courses/ruby-on-rails/lessons/authentication) website, with an added ability to signup from the app, as well as feature to remember the user.
 
-* System dependencies
+## Getting started
 
-* Configuration
+To get started, clone the repo and then install the necessary gems with:
 
-* Database creation
+> `bundle install --without production`
 
-* Database initialization
+Migrate the database next with:
 
-* How to run the test suite
+> `rails db:migrate`
 
-* Services (job queues, cache servers, search engines, etc.)
+Then run the test suite to ensure everything works.
 
-* Deployment instructions
+> `rails test`
 
-* ...
+Launch app with:
+
+> `rails server`
+
+> Then visit 'localhost:3000' in you browser.
+
+👤 **Muhammad Arslan**
+
+- Github: [@githubhandle](https://github.com/arslanbisharat)
+- Twitter: [@twitterhandle](https://twitter.com/arslan_bisharat-2020bb156)
+- Linkedin: [linkedin](https://www.linkedin.com/in/muhammad-arslan-2020bb156)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/arslanbisharat/members_only/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
