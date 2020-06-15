@@ -450,3 +450,372 @@ ActionView::Template::Error - undefined method `name' for #<User id: nil, email:
   app/views/devise/registrations/new.html.erb:5:in `view template'
 
 Started POST "/__better_errors/d09144f7d0c64c49/variables" for ::1 at 2020-06-12 23:01:19 -0700
+Started GET "/" for ::1 at 2020-06-15 08:01:19 -0700
+  [1m[35m (9.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+:
+
+Started GET "/" for ::1 at 2020-06-15 08:01:19 -0700
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/cd07383d01958edf/variables" for ::1 at 2020-06-15 08:01:20 -0700
+  [1m[35m (8.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (174.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (151.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20200612130536)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (37.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar NOT NULL, "name" varchar NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mprimary::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200612130536"]]
+  [1m[35m (239.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePosts (20200612133414)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "posts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_posts_on_user_id" ON "posts" ("user_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200612133414"]]
+  [1m[35m (183.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-06-15 15:02:37.743236"], ["updated_at", "2020-06-15 15:02:37.743236"]]
+  [1m[35m (154.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-06-15 08:02:42 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY updated_at DESC[0m
+  ↳ app/views/posts/_posts.html.erb:1
+  Rendered posts/_posts.html.erb (Duration: 30.0ms | Allocations: 1508)
+  Rendered posts/index.html.erb within layouts/application (Duration: 45.8ms | Allocations: 2121)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in C:/Users/Arsaln/Desktop/members_only/public/packs
+[Webpacker] C:/Ruby26-x64/lib/ruby/2.6.0/x64-mingw32/etc.so: warning: already initialized constant Struct::Passwd
+
+[Webpacker] Hash: 15d1bb7b54cf6326b9ba
+Version: webpack 4.43.0
+Time: 14905ms
+Built at: 06/15/2020 8:03:20 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 37625ms (Views: 37535.5ms | ActiveRecord: 2.2ms | Allocations: 135826)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-06-15 08:03:56 -0700
+Processing by RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 525)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 772.6ms | Allocations: 24407)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 939ms (Views: 908.9ms | ActiveRecord: 2.6ms | Allocations: 40942)
+
+
+Started POST "/users" for ::1 at 2020-06-15 08:04:40 -0700
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"j7kDlNsGVxtP7FVB+8TKfuwMltGX7s7xsEfR+tlkAXfm6KWNhzk5wc46ifOdCj0XwBr1+dMa5UfXJeR7DEkAEA==", "user"=>{"name"=>"Alisha Iman", "username"=>"alisha", "email"=>"aaaa@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "aaaa@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (4.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "name", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "alisha"], ["name", "Alisha Iman"], ["email", "aaaa@gmail.com"], ["encrypted_password", "$2a$12$asy5g2ybJJ0HI63Bz8BKaetlOmCJAy3jv9l0bSzUkEOOBwfkjSLvy"], ["created_at", "2020-06-15 15:04:41.273457"], ["updated_at", "2020-06-15 15:04:41.273457"]]
+  [1m[35m (28.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 532ms (ActiveRecord: 33.0ms | Allocations: 11162)
+
+
+Started GET "/" for ::1 at 2020-06-15 08:04:41 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY updated_at DESC[0m
+  ↳ app/views/posts/_posts.html.erb:1
+  Rendered posts/_posts.html.erb (Duration: 3.3ms | Allocations: 654)
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 762)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 103ms (Views: 101.0ms | ActiveRecord: 1.3ms | Allocations: 9188)
+
+
+Started GET "/posts/new" for ::1 at 2020-06-15 08:04:51 -0700
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 11.4ms | Allocations: 5048)
+  Rendered posts/new.html.erb within layouts/application (Duration: 23.9ms | Allocations: 5374)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 146ms (Views: 99.8ms | ActiveRecord: 2.4ms | Allocations: 17983)
+
+
+Started POST "/posts" for ::1 at 2020-06-15 08:04:56 -0700
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"yhjmbRj2NyO8CJQZIzU09zoe6hXkRakdgaqnAYL7qpmIylLexHNjtzliUBOWabpDv4tAX7e7gaB0t6R9fQ0F/w==", "post"=>{"title"=>"liuyiuduiew", "body"=>"jkyuskdfgsuiadgcyudw"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.4ms | Allocations: 2664)
+
+
+
+NoMethodError - undefined method `save' for nil:NilClass:
+  app/controllers/posts_controller.rb:15:in `create'
+
+Started POST "/__better_errors/9af14eced2fa547a/variables" for ::1 at 2020-06-15 08:04:57 -0700
+Started GET "/posts" for ::1 at 2020-06-15 08:09:12 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY updated_at DESC[0m
+  ↳ app/views/posts/_posts.html.erb:1
+  Rendered posts/_posts.html.erb (Duration: 26.9ms | Allocations: 1215)
+  Rendered posts/index.html.erb within layouts/application (Duration: 36.5ms | Allocations: 1324)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 267ms (Views: 245.4ms | ActiveRecord: 16.7ms | Allocations: 17059)
+
+
+Started GET "/posts/new" for ::1 at 2020-06-15 08:09:16 -0700
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 26.5ms | Allocations: 4470)
+  Rendered posts/new.html.erb within layouts/application (Duration: 27.9ms | Allocations: 4540)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 291ms (Views: 228.5ms | ActiveRecord: 8.8ms | Allocations: 17814)
+
+
+Started POST "/posts" for ::1 at 2020-06-15 08:09:22 -0700
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"+Z/Rcpczv73nv1jcwGdScGdw1VPMjwcXt38+jYUzNMK7TWXBS7brKWLVnNZ1O9zE4uV/GZ9xL6pCYj3xesWbpA==", "post"=>{"title"=>"jkjhj", "body"=>"bjjh"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:15:in `create'
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:15:in `create'
+  [1m[36mPost Create (5.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "jkjhj"], ["body", "bjjh"], ["user_id", 1], ["created_at", "2020-06-15 15:09:23.038163"], ["updated_at", "2020-06-15 15:09:23.038163"]]
+  ↳ app/controllers/posts_controller.rb:15:in `create'
+  [1m[35m (28.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:15:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 443ms (ActiveRecord: 37.4ms | Allocations: 9265)
+
+
+Started GET "/" for ::1 at 2020-06-15 08:09:23 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (2.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY updated_at DESC[0m
+  ↳ app/views/posts/_posts.html.erb:1
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_posts.html.erb:6
+  Rendered posts/_posts.html.erb (Duration: 70.2ms | Allocations: 4007)
+  Rendered posts/index.html.erb within layouts/application (Duration: 103.9ms | Allocations: 4113)
+Completed 500 Internal Server Error in 196ms (ActiveRecord: 2.9ms | Allocations: 4635)
+
+
+
+ActionView::Template::Error - undefined method `user' for nil:NilClass:
+  app/views/posts/_posts.html.erb:7:in `view template'
+  app/views/posts/index.html.erb:4
+
+Started POST "/__better_errors/92a029f5364d8762/variables" for ::1 at 2020-06-15 08:09:24 -0700
+Started POST "/posts" for ::1 at 2020-06-15 08:11:02 -0700
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"Xj+3582qU5cTFxiba0A6VDh3BS5PtKsnPzBJ4bj8TL7uBvjKPc0oC/qABAl7CPeHXx4x/qWR+mSlIv4v8XdzfA==", "post"=>{"title"=>"jkjhj", "body"=>"bjjh"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:15:in `create'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:15:in `create'
+  [1m[36mPost Create (2.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "jkjhj"], ["body", "bjjh"], ["user_id", 1], ["created_at", "2020-06-15 15:11:03.141503"], ["updated_at", "2020-06-15 15:11:03.141503"]]
+  ↳ app/controllers/posts_controller.rb:15:in `create'
+  [1m[35m (14.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:15:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 81ms (ActiveRecord: 18.3ms | Allocations: 5437)
+
+
+Started GET "/" for ::1 at 2020-06-15 08:11:03 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY updated_at DESC[0m
+  ↳ app/views/posts/_posts.html.erb:1
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_posts.html.erb:6
+  Rendered posts/_posts.html.erb (Duration: 23.7ms | Allocations: 4005)
+  Rendered posts/index.html.erb within layouts/application (Duration: 30.9ms | Allocations: 4110)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 1.0ms | Allocations: 4622)
+
+
+
+ActionView::Template::Error - undefined method `user' for nil:NilClass:
+  app/views/posts/_posts.html.erb:7:in `view template'
+  app/views/posts/index.html.erb:4
+
+Started POST "/__better_errors/5b7340898f02b684/variables" for ::1 at 2020-06-15 08:11:03 -0700
+Started POST "/__better_errors/5b7340898f02b684/variables" for ::1 at 2020-06-15 08:11:11 -0700
+Started GET "/" for ::1 at 2020-06-15 08:13:55 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY updated_at DESC[0m
+  ↳ app/views/posts/_posts.html.erb:1
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_posts.html.erb:6
+  Rendered posts/_posts.html.erb (Duration: 20.9ms | Allocations: 4017)
+  Rendered posts/index.html.erb within layouts/application (Duration: 23.2ms | Allocations: 4123)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 2.0ms | Allocations: 4643)
+
+
+
+ActionView::Template::Error - undefined method `user' for nil:NilClass:
+  app/views/posts/_posts.html.erb:7:in `view template'
+  app/views/posts/index.html.erb:4
+
+Started POST "/__better_errors/74e5b97768c7ad42/variables" for ::1 at 2020-06-15 08:13:55 -0700
+Started GET "/" for ::1 at 2020-06-15 08:14:51 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY updated_at DESC[0m
+  ↳ app/views/posts/_posts.html.erb:1
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_posts.html.erb:6
+  Rendered posts/_posts.html.erb (Duration: 40.3ms | Allocations: 4348)
+  Rendered posts/index.html.erb within layouts/application (Duration: 50.0ms | Allocations: 4713)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 2.1ms | Allocations: 6251)
+
+
+
+ActionView::Template::Error - undefined method `username' for nil:NilClass:
+  app/views/posts/_posts.html.erb:7:in `view template'
+  app/views/posts/index.html.erb:4
+
+Started POST "/__better_errors/d0046f880f3820a0/variables" for ::1 at 2020-06-15 08:14:52 -0700
+Started GET "/" for ::1 at 2020-06-15 08:39:59 -0700
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY updated_at DESC[0m
+  ↳ app/views/posts/_posts.html.erb:1
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_posts.html.erb:6
+  Rendered posts/_posts.html.erb (Duration: 236.3ms | Allocations: 4380)
+  Rendered posts/index.html.erb within layouts/application (Duration: 257.1ms | Allocations: 4743)
+Completed 500 Internal Server Error in 330ms (ActiveRecord: 1.2ms | Allocations: 6093)
+
+
+
+ActionView::Template::Error - undefined method `user' for nil:NilClass:
+  app/views/posts/_posts.html.erb:7:in `view template'
+  app/views/posts/index.html.erb:4
+
+Started POST "/__better_errors/6adf4b9184963741/variables" for ::1 at 2020-06-15 08:40:01 -0700
+Started GET "/" for ::1 at 2020-06-15 08:41:22 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY updated_at DESC[0m
+  ↳ app/views/posts/_posts.html.erb:1
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_posts.html.erb:6
+  [1m[36mUser Load (61.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_posts.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_posts.html.erb:9
+  Rendered posts/_posts.html.erb (Duration: 371.1ms | Allocations: 3598)
+  Rendered posts/index.html.erb within layouts/application (Duration: 380.5ms | Allocations: 3958)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1085ms (Views: 1011.7ms | ActiveRecord: 63.9ms | Allocations: 12641)
+
+
+Started DELETE "/posts/2" for ::1 at 2020-06-15 08:41:30 -0700
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uuuN73AdeKQ+Eh44OfESPjPJfRbUp/XHOvpNBUL9ZnoK0sLCgHoDONeFAqopud/tVKBJxj6CpISg6PrLC3ZZuA==", "id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:38:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:39:in `destroy'
+  [1m[36mPost Destroy (8.3ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/posts_controller.rb:39:in `destroy'
+  [1m[35m (14.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:39:in `destroy'
+Redirected to http://localhost:3000/
+Completed 302 Found in 191ms (ActiveRecord: 24.8ms | Allocations: 4415)
+
+
+Started GET "/" for ::1 at 2020-06-15 08:41:31 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (2.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY updated_at DESC[0m
+  ↳ app/views/posts/_posts.html.erb:1
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_posts.html.erb:6
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_posts.html.erb:9
+  Rendered posts/_posts.html.erb (Duration: 21.8ms | Allocations: 2459)
+  Rendered posts/index.html.erb within layouts/application (Duration: 31.5ms | Allocations: 2562)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 131ms (Views: 126.2ms | ActiveRecord: 3.8ms | Allocations: 9966)
+
+
+Started GET "/posts/1/edit" for ::1 at 2020-06-15 08:41:34 -0700
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `edit'
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 103.6ms | Allocations: 4652)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 111.4ms | Allocations: 4953)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 272ms (Views: 242.3ms | ActiveRecord: 1.7ms | Allocations: 14380)
+
+
+Started PATCH "/posts/1" for ::1 at 2020-06-15 08:41:39 -0700
+Processing by PostsController#update as HTML
+  Parameters: {"authenticity_token"=>"aa03eBjsxwXFLV9GB1slNYdxYeXyUYZ8k7lG6daT/pWCel7AunMaAblQspgVkWKpxvzwB8om0zu3keLA1eIMLg==", "post"=>{"title"=>"jkjhj", "body"=>"bjjhjjj"}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (1.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:29:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:30:in `update'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:30:in `update'
+  [1m[36mPost Update (2.7ms)[0m  [1m[33mUPDATE "posts" SET "body" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["body", "bjjhjjj"], ["updated_at", "2020-06-15 15:41:39.489924"], ["id", 1]]
+  ↳ app/controllers/posts_controller.rb:30:in `update'
+  [1m[35m (38.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:30:in `update'
+Redirected to http://localhost:3000/
+Completed 302 Found in 223ms (ActiveRecord: 44.5ms | Allocations: 6200)
+
+
+Started GET "/" for ::1 at 2020-06-15 08:41:39 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY updated_at DESC[0m
+  ↳ app/views/posts/_posts.html.erb:1
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_posts.html.erb:6
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_posts.html.erb:9
+  Rendered posts/_posts.html.erb (Duration: 70.9ms | Allocations: 2458)
+  Rendered posts/index.html.erb within layouts/application (Duration: 73.6ms | Allocations: 2561)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 186ms (Views: 181.8ms | ActiveRecord: 3.4ms | Allocations: 9956)
+
+
